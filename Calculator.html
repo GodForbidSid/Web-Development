@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CALCULATOR</title>
+</head>
+<style>
+
+    button{
+    color:darkred;
+    margin : 5px;
+    padding : 6px;
+    border : 4px solid darkred;
+    border-radius: 10px;
+    background-color:antiquewhite;
+    
+    }
+
+input[type="number"]
+{
+    color: darkred;
+    margin : 5px;
+    padding : 6px;
+    border : 4px solid darkred;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+ .box {
+    padding: 20px;
+    margin: 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: ease 0.5s;
+    background:crimson;
+    border: 3px dashed antiquewhite;
+  }
+
+  .box:hover{
+    transition: ease 0.5s;
+    transform: scale(1.05);
+  }
+  body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:aliceblue;
+    background-color:darkred;
+}
+  .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+</style>
+<body>
+    <h1><center>FUN WITH NUMBERS</center></h1>
+    <h5><center><p id="datetime"></p></center></h5>
+
+    <script>
+    function gettime(){
+    var datetime = new Date().toString().slice(0,24)
+    document.getElementById('datetime').textContent = datetime;
+}
+    setInterval(gettime,1000);
+    </script>
+
+    <div class="container">
+        <div class="box"><center>
+            <h1>Addition</h1>
+            <p>Enter two numbers to add:</p>
+            <input type="number" id="num1" placeholder="Enter number 1">
+            <input type="number" id="num2" placeholder="Enter number 2">
+            <br><br>
+            <button onclick="addNumbers()">Add</button>
+            <p>Result: <span id="result1"></span></p></center></div>
+        
+            <script>
+                function addNumbers()
+                {
+                    var num1 = parseFloat(document.getElementById("num1").value);
+                    var num2 = parseFloat(document.getElementById("num2").value);
+                    var sum = num1 + num2;
+                    document.getElementById("result1").innerHTML = sum;
+                }
+            </script>
+           
+            <div class = "box"><center>
+            <h1>Subtraction</h1>
+            <p>Enter two numbers to subtract:</p>
+            <input type="number" id="num3" placeholder="Enter number 1">
+            <input type="number" id="num4" placeholder="Enter number 2">
+            <br><br>
+            <button onclick="subtractNumbers()">Subtract</button>
+            <p>Result: <span id="result2"></span></p></center></div>
+        
+            <script>
+                function subtractNumbers() 
+                {
+                    var num3 = parseFloat(document.getElementById("num3").value);
+                    var num4 = parseFloat(document.getElementById("num4").value);
+                    var difference = num3 - num4;
+                    document.getElementById("result2").innerHTML = difference;
+                }
+                </script>
+        
+            <div class = "box"><center>
+            <h1>Multiplication</h1>
+            <p>Enter two numbers to multiply:</p>
+            <input type="number" id="num5" placeholder="Enter number 1">
+            <input type="number" id="num6" placeholder="Enter number 2">
+            <br><br>
+            <button onclick="multiplyNumbers()">Multiply</button>
+            <p>Result: <span id="result3"></span></p></center></div>
+        
+            <script>
+                function multiplyNumbers() 
+                {
+                    var num5 = parseFloat(document.getElementById("num5").value);
+                    var num6 = parseFloat(document.getElementById("num6").value);
+                    var product = num5 * num6;
+                    document.getElementById("result3").innerHTML = product;
+                }
+            </script>
+        
+            <div class = "box"><center>
+            <h1>Division</h1>
+            <p>Enter two numbers to divide:</p>
+            <input type="number" id="num7" placeholder="Enter dividend">
+            <input type="number" id="num8" placeholder="Enter divisor">
+            <br><br>
+            <button onclick="divideNumbers()">Divide</button>
+            <p>Result: <span id="result4"></span></p></center></div>
+        
+            <script>
+            function divideNumbers() 
+            {
+                var num7 = parseFloat(document.getElementById("num7").value);
+                var num8 = parseFloat(document.getElementById("num8").value);
+                if (num8 === 0) 
+                {
+                    document.getElementById("result4").innerHTML = "Cannot divide by zero";
+                } 
+                else 
+                {
+                    var quotient = num7 / num8;
+                    document.getElementById("result4").textContent = quotient;
+                }
+            }
+            </script>
+
+            <div class = "box"><center>
+            <h1>Remainder</h1>
+            <p>Enter two numbers to get remainder:</p>
+            <input type="number" id="num9" placeholder="Enter dividend">
+            <input type="number" id="num10" placeholder="Enter divisor">
+            <br><br>
+            <button onclick="getRemainder()">Remainder</button>
+            <p>Result: <span id ="result5"></span></p></center></div>
+
+            <script>
+                function getRemainder()
+                {
+                    var num9 = parseFloat(document.getElementById("num9").value);
+                    var num10 = parseFloat(document.getElementById("num10").value);
+                    if (num10 === 0)
+                    {
+                        document.getElementById("result5").innerHTML = "Cannot divide by zero";
+                    }
+                    else
+                    {
+                        var remainder = num9 % num10;
+                        document.getElementById("result5").innerHTML = remainder;
+                    }
+                }
+            </script>
+
+            <div class = "box"><center>
+            <h1>Exponentiation</h1>
+            <p>Enter two numbers to get exponent:</p>
+            <input type="number" id="num11" placeholder="Enter base">
+            <input type="number" id="num12" placeholder="Enter exponent">
+            <br><br>
+            <button onclick="getExponent()">Exponentiate</button>
+            <p>Result: <span id="result6"></span></p></center></div>
+
+            <script>
+                function getExponent()
+                {
+                    var num11 = parseFloat(document.getElementById("num11").value);
+                    var num12 = parseFloat(document.getElementById("num12").value);
+                    var exponent = num11 ** num12;
+                    document.getElementById("result6").innerHTML = exponent;
+                }
+            </script>
+    
+            <div class = "box"><center>
+            <h1>Pattern Generator</h1>
+            <p>Enter the length of the Pattern:</p>
+            <input type="number" id="lcv" placeholder="Enter Length">
+            <br><br>
+            <button onclick="genpatt();return false">Generate</button>
+            <p>Result: <span id ="result7"></span></p></center></div>
+
+            <script>
+                function genpatt()
+                {
+                    var lcv=parseInt(document.getElementById('lcv').value,10),i="",j="";
+                    let n = lcv; 
+                    let string = "";
+                    for (let i = 1; i <= n; i++) {
+                        for (let j = 1; j <= i; j++) {
+                        string += j;
+                        }
+                    string += "\n";
+                    }
+                    document.getElementById("result7").innerText = '\n'+string;  
+                }
+            </script>
+
+            <div class = "box"><center>
+            <h1>Reverse Pattern Generator</h1>
+            <p>Enter the length of the Pattern:</p>
+            <input type="number" id="rlcv" placeholder="Enter Length">
+            <br><br>
+            <button onclick="genrpatt();return false">Generate</button>
+            <p>Result: <span id ="result8"></span></p></center></div>   
+
+            <script>
+                function genrpatt()
+                {
+                var rlcv=parseInt(document.getElementById('rlcv').value,10),i="",j="";
+                let n = rlcv;
+                let string = "";
+                for (let i = 1; i <= n; i++) {
+                    for (let j = 1; j < i; j++) {
+                    string += " ";
+                    }
+                for (let k = 1; k <= 1 * (n - i + 1); k++) {
+                    string += k;
+                }
+                string += "\n";
+                }
+                document.getElementById("result8").innerText = '\n'+string;
+                }
+            </script>
+
+            <!--
+                <div class = "box"><center>
+            <h1>Multiple Generator</h1>
+            <p>Enter the number and the number of multiples</p>
+            <input type="number" id="mlv" placeholder="Enter Number">
+            <input type="number" id="mlcv" placeholder="Enter number of multiples">
+            <br><br>
+            <button onclick="mulgen()">Multiples</button>
+            <p>Result: <span id="result9"></span></p></center></div>
+            
+
+            <script>
+                function mulgen(){
+                    var mlv=parseInt(document.getElementById('mlv').value,10)
+                    var mclv=parseInt(document.getElementById('mclv').value,10)
+                    var txtbx = document.getElementById("result9")
+                    var strarr = []
+                    for(let i=1; i<=mclv; i++)
+                    {
+                        strarr.push(`${mlv} x ${i} = ${mlv*i}`)
+                    }
+                    txtbx.innerHTML = strarr;
+                }
+            </script>
+            -->
+
+
+         </div>
+</body>
+</html>

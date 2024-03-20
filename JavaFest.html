@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<head>
+<title>DOCSFest</title>
+<style>
+    h1{
+        text-size-adjust: unset;
+    }
+a{
+    text-decoration: none;
+    color: teal;
+}
+    .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .tile {
+    position: sticky;
+  }
+ .box {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: ease 0.5s;
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  .box:hover{
+    transition: ease 0.5s;
+    transform: scale(1.05);
+  }
+  .parallax {
+    background-image: url('');
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+ .select{
+    text-align: center ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+ }
+
+     body { 
+            background-size: contain;
+            background-image: url("wallpaper.jpg");
+            backdrop-filter:blur(4px);
+            
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: aquamarine;
+        }
+        table,th,td{
+            border: 3px solid teal;
+            color: turquoise; 
+              
+        }
+        td{
+            padding: 3px 6px 3px 6px; 
+        }
+        label{
+            color: aquamarine;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class = "parallax">
+    <big>
+        <center><img src="culogo.png" alt="Image not available" width="400vh"></center>
+    <h3><center><marquee><b><i>JAVA FANS, ALL ABOARD<br> FOR THE BEST IT FEST<br></i></b></marquee></center><h3>
+    <div class="tile"><h1><center><b>THE JAVAFEST</b></center></h1></div>
+       <center><img src="java.png" alt="image not available" width="300vh"></center> 
+       <div class="container">
+       <center><div class="box"><i><b><p>Welcome to the ultimate celebration of Java at our exhilarating IT fest!<br> 
+        Join us as we dive into the world of this versatile programming language, where innovation meets technology.<br>
+        Get ready for an immersive experience packed with workshops, competitions, and networking opportunities<br>
+        That will leave you inspired and motivated to unlock Java's endless possibilities.</p></div></center></b></i>
+
+        <div class="box"><center>
+            <h3>EVENT DETAILS</h3>
+        <table>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Events</th>
+        </tr>
+        <tr>
+            <td>25th JAN</td>
+            <td>10:00 A.M.</td>
+            <td>ORIENTATION, PANEL DISCUSSION & TOOLS EXPO</td>
+        </tr>
+        <tr>
+            <td>26th JAN</td>
+            <td>10:30 A.M.</td>
+            <td>FILE I/O, QUIZ COMPETITIONS & EXCEPTION HANDLING</td>
+        </tr>
+        <tr>
+            <td>27th JAN</td>
+            <td>11:00 A.M.</td>
+            <td>PROJECT SHOWCASE, HACKATHON & CODING CHALLENGES</td>
+        </tr>
+        <tr>
+            <td>28th JAN</td>
+            <td>11:00 A.M.</td>
+            <td>TECH TALKS, NETWORKING & SOCIALIZING & Q&A SESSIONS</td>
+        </tr>
+        </table></center>
+    
+    </div>
+
+        <div class="box"><b><h2>To compete in our Java IT fest, follow these five simple instructions:</h2></b></center>
+        <i><b><dl><dt>Registration</dt> <dd>Visit our website and complete the registration process by providing your details accurately.</dd><br>
+
+            <dt>Project Proposal</dt><dd>Submit a comprehensive project proposal that highlights your innovative idea and how it relates to Java. Include the problem statement, approach, and expected</dd><br>
+            
+            <dt>Coding and Implementation</dt> <dd>Develop your project using Java programming language, adhering to best practices and industry standards. Make sure to meet the specified guidelines and deadlines.</dd><br>
+            
+            <dt>Presentation</dt> <dd>Prepare an engaging presentation to showcase your project's features, functionality, and technical aspects. Clearly explain the problem-solving approach and highlight the significance of your project.</dd><br>
+     
+            <dt>Judging and Evaluation</dt> <dd>Participate in the judging session where our expert panel will evaluate your project based on creativity, technical proficiency, execution, and presentation skills. The winners will be announced based on the assessment criteria.</dd></dl></b></i></div>
+
+            <div class="box"><h3><b><center>INAUGURATION</b></h3></center>
+
+            <center>
+                <b>Date & TIme : </b><i>25th January 2024, 10 o'clock onwards</i><br>
+                <b>Location : </b><i>Main Auditorium, Christ University, Bangalore</i>
+            </center>
+
+           <center><h2>Register now to make your coding dreams a byte-sized reality</h2></center><br>
+        
+            <form action="JavaFest.php" method="post">
+                <center><label for="stdid">University Mail :</label><br>
+                    <input type="text" name="enrolled" placeholder="example@cu.in" required><br><br>
+                <label for="DAY1">Choose an Event for Day 1</label><br>
+                <select id="d1" name="d1">
+                  <option value="orientation">ORIENTATION</option>
+                  <option value="panel_dicussion">PANEL DISCUSSION</option>
+                  <option value="tools_expo">TOOLS EXPO</option>
+                </select><br><br>
+                    <label for="DAY2">Choose an Event for Day 2</label><br>
+                    <select id="d2" name="d2">
+                      <option value="file_io">FILE I/O</option>
+                      <option value="Quiz">QUIZ COMPETITIONS</option>
+                      <option value="exception">EXCEPTION HANDLING</option>
+                    </select><br><br>
+                        <label for="DAY3">Choose an Event for Day 3</label><br>
+                        <select id="d3" name="d3">
+                          <option value="techtalks">TECH TALKS</option>
+                          <option value="netsoc">NETWORKING & SOCIALIZING</option>
+                          <option value="session">Q&A SESSIONS</option>
+                        </select><br><br>
+                    <input type="submit" onclick=""></center>
+        </div>
+
+            <center><marquee><h1><b><i>Let the Java extravaganza begin!</i></b></h1></marquee></center>
+            
+            <div class="box"><h4><i><center>FOR MORE DETAILS, CHECK OUT THE OFFICIAL PAGE OF <br><a href="https://christuniversity.in/">CHRIST UNIVERSITY</a></i></h4></center>
+            <center><h4><i>OR</i></h4></center>
+            <center><h4><i>DROP US A FOLLOW ON <a href="https://www.instagram.com/christ_university_bangalore/?hl=en">INSTAGRAM</a> FOR THE LASTEST UPDATES !</i></h4></center>
+            </div>
+        </div>
+            </big>
+                <script>
+                    function bigit(x) 
+                    {
+                        x.style.height = "64px";
+                        x.style.width = "64px";
+                    }   
+                </script>
+</body>
+</html>
